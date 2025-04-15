@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* Giving margin to all the button.  */
+.create-main {
+    margin: 100px 350px 100px 350px;
+}
+
+
+/* Creating a new post.  */
+.create {
+    width: 800px;
+    height: 300px;
+    padding: 40px;
+    background-color: rgb(184, 192, 255);
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.258), -2px -2px 2px 2px rgba(0, 0, 0, 0.258) ;
+}
+
+.create:focus-within {
+    box-shadow: inset 2px 2px 2px 2px rgba(0, 0, 0, 0.258), inset -2px -2px 2px 2px rgba(0, 0, 0, 0.258) ;
+}
+
+.create-post {
+    width: 600px;
+    height: 60%;
+    padding: 30px;
+    display: flex;
+}
+
+.create-caption {
+    border-radius: 10px;
+    padding: 10px;
+    margin-right: 20px;
+    outline: none;
+    border: none;
+    min-width: 500px;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    flex: 1;
+}
+
+.submit-btn {
+    height: 40px;
+    width: 200px;
+    margin-left: 30px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+}
+
+
+
+

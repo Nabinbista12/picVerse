@@ -1,0 +1,141 @@
+@charset "UTF-8";
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e0f2f7; /* Light blue-grey background */
+    display: flex;
+    min-height: 100vh;
+}
+
+.report-container {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar {
+    width: 200px;
+    height: 100vh;
+    background-color: #fff;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    padding: 20px 10px;
+  }
+  
+  .logo {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .logo img {
+    height: 100px; /* Adjust logo size */
+  }
+  
+  .sidebar ul {
+    list-style: none;
+  }
+  
+  .sidebar ul li {
+    padding: 15px 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .sidebar ul li:hover {
+    background-color: #f1f1f1;
+    border-radius: 5px;
+  }
+  
+
+/* Main Content */
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main Header */
+.report-main {
+    flex: 1;
+  }
+  
+.report-topbar {
+    background-color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .search-bar input {
+    padding: 5px 10px;
+    width: 250px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+/* Report Section */
+.report-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.report-section h1 {
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.report-card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 400px; /* Adjust width as needed */
+}
+
+.profile-icon-container {
+    background-color: #e0f7fa; /* Light teal background for the icon */
+    border-radius: 50%;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-icon {
+    color: #4dd0e1; /* Teal color for the user icon */
+}
+
+.customer-details {
+    text-align: center;
+}
+
+.customer-details p {
+    margin: 8px 0;
+    color: #555;
+}
+
+.customer-details strong {
+    font-weight: bold;
+    color: #333;
+}
