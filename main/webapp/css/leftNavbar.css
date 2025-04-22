@@ -1,0 +1,91 @@
+@charset "UTF-8";
+
+/* This style is for the main div of the left navbar.  */
+.left-navbar {
+	width: 300px;
+    height: 100vh;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    background-color: rgb(36, 36, 36);
+    box-shadow: 1px 0 1px rgb(255 255 255 / 50%);
+}
+
+/* This are the style for the sidenavbar.  */
+.left-nav-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: space-between;
+    height: 100%;
+    padding: 10px 20px 80px;
+}
+
+/* This is to increase the space between in the nav item.  */
+.left-nav-increase-space {
+    height: 140px;
+}
+
+
+.left-nav-item-common {
+    margin-right: 30px;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 20px;
+    padding: 0 10px;
+    transition: .2s ease-in-out;
+    text-decoration: none;
+}
+
+.left-nav-item-common i {
+    font-size: 25px;
+    color: rgba(234, 233, 233, 0.762);
+}
+
+.left-nav-item-common h2 {
+    position: absolute;
+    left: 90px;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 25px;
+    color: rgba(234, 233, 233, 0.762);
+}
+
+.left-nav-item-common button {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.left-nav-item-common button h2 {
+	font-weight: 300;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+
+.profile-img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* This is the hover effect for the icon.  */
+.left-nav-item-common:hover {
+    background-color: rgba(92, 89, 89, 0.418);
+    box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.573);
+}
+
+
+.left-nav-item-common:hover i,
+.left-nav-item-common:hover h2 {
+    color: rgba(252, 252, 252, 0.98);
+}

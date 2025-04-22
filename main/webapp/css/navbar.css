@@ -1,0 +1,113 @@
+@charset "UTF-8";
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	color: rgba(234, 233, 233, 0.762);
+}
+
+body {
+	background-color: black;
+	font-family: "Josefin Sans", sans-serif;
+}
+
+/* Giving style to the top navbar.  */
+.top-navbar {
+	position: fixed;
+	top: 0;
+	z-index: 10;
+	height: 80px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	padding: 0 10px;
+	background-color: rgba(24, 24, 24);
+	box-shadow: 0 4px 4px rgba(100, 99, 99, 0.468);
+	font-family: "Josefin Sans", sans-serif;
+}
+
+
+
+/* This is for the logo of the website.  */
+.logo a {
+	display: flex;
+	align-items: center;
+	position: relative;
+	right: 50px;
+}
+
+.logo a img {
+	width: 45px;
+	height: 45px;
+	border-radius: 50%;
+	margin-right: 10px;
+}
+
+/* This are the style for the sidenavbar.  */
+.top-nav-item {
+	position: relative;
+	left: 20px;
+	display: flex;
+}
+
+.top-nav-item-common {
+	margin-right: 20px;
+	width: fit-content;
+	padding: 0 15px;
+	height: 60px;
+	display: flex;
+	align-items: center;
+	border-radius: 20px;
+	transition: .2s ease-in-out;
+	border: 2px solid transparent;
+	text-decoration: none;
+}
+
+.top-nav-item-common i {
+	font-size: 20px;
+	margin: 0 10px;
+	padding: 5px;
+	color: rgba(234, 233, 233, 0.762);
+}
+
+.top-nav-item-common h2 {
+	font-size: 20px;
+	font-weight: 300;
+	color: rgba(234, 233, 233, 0.762);
+}
+
+/* This is the hover effect for the icon.  */
+.top-nav-item-common:hover {
+	/* background-color: rgba(0, 0, 0, 0.095); */
+	background-color: transparent;
+	box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.573);
+}
+
+.top-nav-item-common:hover i, .top-nav-item-common:hover h2 {
+	color: rgba(234, 233, 233, 0.92);;
+}
+
+/* This is for the profile.  */
+.profile {
+	display: flex;
+	align-items: center;
+	position: relative;
+	left: 50px;
+}
+
+.profile img {
+	width: 45px;
+	height: 45px;
+	border-radius: 50%;
+	margin-right: 10px;
+}
+
+.left-navbar {
+	position: fixed;
+	left: 0;
+	height: 100vh;
+	width: 300px;
+	background-color: blue;
+}

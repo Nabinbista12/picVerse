@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+/* Giving margin to all the button.  */
+.edit {
+	margin: 120px 0 0 390px;
+}
+
+/* Creating a new post.  */
+.edit-main {
+	width: 800px;
+	height: 300px;
+	padding: 40px;
+	border-radius: 20px;
+	box-shadow: 2px 2px 2px rgba(255, 255, 255, 0.64), -2px -2px 2px
+		rgba(255, 255, 255, 0.64);
+}
+
+.edit-main:focus-within {
+	box-shadow: inset 2px 2px 2px 2px rgba(255, 255, 255, 0.2), inset -2px
+		-2px 2px 2px rgba(255, 255, 255, 0.2);
+}
+
+.edit-post {
+	width: 800px;
+	height: 60%;
+	padding: 10px;
+	display: flex;
+}
+
+.edit-caption {
+	border-radius: 10px;
+	padding: 10px;
+	margin-right: 20px;
+	outline: none;
+	border: none;
+	min-width: 500px;
+	height: 130px;
+	font-size: 20px;
+	flex: 1;
+	color: black;
+}
+
+.submit-btn {
+	height: 40px;
+	width: 200px;
+	margin: 30px 0 0 20px;
+	border-radius: 10px;
+	border: 2px solid white;
+	background-color: transparent;
+}

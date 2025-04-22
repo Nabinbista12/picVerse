@@ -1,0 +1,149 @@
+@charset "UTF-8";
+
+
+.home-main {
+    width: 600px;
+    height: fit-content;
+    position: relative;
+    left: 30%;
+    padding: 10px;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-main * {
+	color: white;
+}
+
+/* Post container - Main post styling */
+.home-post {
+    font-size: 1.2em;
+    width: 500px;
+    height: auto;
+    padding: 0;
+    background: black;
+    border: 1px solid #dbdbdb;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+}
+
+/* Post header - Contains profile picture, username */
+.home-post-header {
+    display: flex;
+    align-items: center;
+    padding: 8px 20px; /* Reduced top/bottom padding, kept side padding */
+    border-bottom: 1px solid #efefef;
+    margin-bottom: 5px; /* Small space below header */
+}
+
+.home-profile-pic {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    margin-right: 16px;
+    border: 2px solid #e6e6e6;
+}
+
+.home-user-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.home-username {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 1.1em;
+}
+
+/* Caption styling - now in its own container */
+.home-caption-container {
+    padding: 5px 20px; /* Reduced top/bottom padding, kept side padding */
+    border-bottom: 1px solid #efefef;
+}
+
+.home-caption {
+    color: #262626;
+    margin: 0;
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+/* Post image styling */
+.home-post-image {
+    width: 100%;
+    display: flex;
+    padding: 10px;
+
+}
+
+.home-post-image img {
+    width: 100%;
+    display: block;
+    max-height: 600px;
+    object-fit: contain;
+    background-color: #000;
+}
+
+/* Post footer - Contains likes and actions */
+.home-post-footer {
+    padding: 8px 20px; /* Reduced top/bottom padding, kept side padding */
+}
+
+/* Action buttons styling */
+.home-actions {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.home-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    transition: transform 0.2s;
+}
+
+/* This style is for the icon for the like and comment  */
+.home-actions button:hover {
+    transform: scale(1.1);
+}
+
+.home-actions button i {
+    color: rgb(120, 120, 120);
+    font-size: 32px;
+}
+
+/* This is for the like button.   */
+.home-like-btn {
+    display: flex;
+    align-items: center;
+}
+
+.home-like-btn i {
+    color: rgba(234, 233, 233, 0.762);;
+    font-size: 32px;
+    margin-right: 10px;
+	transition: transform 0.2s;
+}
+
+.home-like-btn:hover i {
+    color: #ed4956;
+    transform: scale(1.1);
+}
+
+.home-comment-btn:hover i {
+    color: #0095f6;
+}
+
+.home-likes {
+    font-weight: bold;
+    margin: 10px 0 5px;
+    font-size: 0.95em;
+}
