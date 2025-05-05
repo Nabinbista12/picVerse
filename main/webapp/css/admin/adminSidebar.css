@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+.sidebar {
+	width: 200px;
+	height: 100vh;
+	background-color: #fff;
+	box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+	padding: 20px 10px;
+}
+
+.logo {
+	margin-bottom: 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 5px;
+}
+
+.logo img {
+	height: 100px; /* Adjust logo size */
+}
+
+.sidebar a {
+    text-decoration: none;     /* removes underline */
+    color: black;              /* makes it look like normal text */
+    display: flex;             /* makes icon + text line up */
+    align-items: center;
+    gap: 10px;                 /* space between icon and text */
+    width: 100%;
+}
+
+.sidebar a:hover {
+    color: #007bff;            /* optional: blue on hover */
+}
+
+.sidebar ul {
+	list-style: none;
+}
+
+.sidebar ul li {
+	padding: 15px 10px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.sidebar ul li:hover {
+	background-color: #f1f1f1;
+	border-radius: 5px;
+}
