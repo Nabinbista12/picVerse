@@ -13,11 +13,11 @@
 <body>
 
 	<!-- This is to create a new post.  -->
-	<main class="edit">
+	<main class="edit-main">
 		<h1 class="heading">Edit your post</h1>
 		<br>
 
-		<form action="edit" method="post" class="edit-main">
+		<form action="edit" method="post" class="edit">
 			<div class="edit-post">
 				<!-- Hidden input to pass post ID -->
 				<input type="hidden" name="id" value="${post.id}" />

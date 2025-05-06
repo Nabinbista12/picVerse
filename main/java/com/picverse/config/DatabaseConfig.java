@@ -12,7 +12,7 @@ public class DatabaseConfig {
   // Database configuration information
   private static final String DB_NAME = "picverse";
   private static final String URL =
-    "jdbc:mysql://localhost:3306/" + DB_NAME + "?autoReconnect=true&useSSL=false";
+    "jdbc:mysql://localhost:3306/" + DB_NAME;
   private static final String USERNAME = "root";
   private static final String PASSWORD = "";
 
@@ -38,12 +38,12 @@ public class DatabaseConfig {
     return connection;
   }
 
-//  public static void main(String[] args) {
-//    try {
-//      // Test the connection
-//      getDbConnection();
-//    } catch (SQLException | ClassNotFoundException e) {
-//      e.printStackTrace();
-//    }
-//  }
+  public static void main(String[] args) {
+    try {
+      // Test the connection
+      getDbConnection();
+    } catch (SQLException | ClassNotFoundException e) {
+      e.printStackTrace();
+    }
+  }
 }

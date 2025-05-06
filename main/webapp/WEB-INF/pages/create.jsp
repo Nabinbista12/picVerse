@@ -18,14 +18,14 @@
 		<h1 class="create-heading">Create a new post</h1>
 		<br>
 
-		<form class="create" action="/PicVerse/create" method="post" enctype="multipart/form-data" >
+		<form class="create" action="create" method="post" enctype="multipart/form-data" required>
 			<div class="create-post">
 				<!-- Caption for the post.  -->
 				<textarea name="caption" id="" class="create-caption" rows="10"
 					cols="30" placeholder="Enter caption or the detail of the post"></textarea>
 
 				<!-- Picture for the post.  -->
-				<input type="file" name="image" class="post-img" accept="image/*">
+				<input type="file" name="image" class="post-img" accept="image/*" required>
 			</div>
 
 

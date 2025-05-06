@@ -45,7 +45,7 @@
 							<i class="fa-regular fa-heart"></i>
 							<p class="likes">100 likes</p>
 						</div>
-						<a href="${pageContext.request.contextPath}/view?id=${post.id}">
+						<a href="${pageContext.request.contextPath}/view?id=${post.id}" class="home-comment-btn" style="text-decoration: none;">
 							<button class="home-comment-btn">
 								<i class="fa-regular fa-comment"></i>
 							</button>
@@ -67,7 +67,7 @@
 					<span class="home-username">Tom</span>
 				</div>
 			</div>
-			<p style="margin: 10px">This si the text that i like so much and
+			<p style="margin: 10px">This is the text that i like so much and
 				i am happy to see it.</p>
 			<!-- This is the post image.  -->
 			<div class="home-post-image">
@@ -91,7 +91,7 @@
 						<i class="fa-regular fa-heart"></i>
 						<p class="likes">100 likes</p>
 					</div>
-					<a href="${pageContext.request.contextPath}/view}">
+					<a href="${pageContext.request.contextPath}/view}" class="home-comment-btn">
 						<button class="home-comment-btn">
 							<i class="fa-regular fa-comment"></i>
 						</button>
@@ -127,7 +127,7 @@
 						<i class="fa-regular fa-heart"></i>
 						<p class="likes">100 likes</p>
 					</div>
-					<a href="view.html">
+					<a href="view.html" class="home-comment-btn">
 						<button class="home-comment-btn">
 							<i class="fa-regular fa-comment"></i>
 						</button>
@@ -139,6 +139,22 @@
 	</main>
 
 	<%@ include file="footer.jsp"%>
+
+
+	<script>
+	    document.addEventListener("click", () => {
+	        const likeBtns = document.querySelectorAll(".home-like-btn");
+	
+	        likeBtns.forEach(btn => {
+	            btn.addEventListener("click", () => {
+	                const icon = btn.querySelector("i");
+	                icon.classList.toggle("fa-regular");
+	                icon.classList.toggle("fa-solid");
+	                icon.classList.toggle("liked");
+	            });
+	        });
+	    });
+	</script>
 
 </body>
 </html>

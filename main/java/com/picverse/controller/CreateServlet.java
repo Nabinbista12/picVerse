@@ -57,12 +57,11 @@ public class CreateServlet extends HttpServlet {
 	    
 	    // Get image file
 	    Part file = request.getPart("image");
-	    String imagefileName = file.getSubmittedFileName();
-	    System.out.println("File name: " + imagefileName);
+	    String imageName = file.getSubmittedFileName();
+	    System.out.println("File name: " + imageName);
 	    System.out.println("Caption: " + caption);
 	    
-//	    String uploadPath = "/image/src/main/webapp/images/" + imagefileName;
-	    String uploadPath = getServletContext().getRealPath("") + "/src/main/webapp/uploads/images/" + imagefileName;
+	    String uploadPath = getServletContext().getRealPath("uploads/images/") + imageName;
 	    System.out.println("Upload path: " + uploadPath);
 	    
 	    // Uploading the file to server
@@ -105,15 +104,15 @@ public class CreateServlet extends HttpServlet {
 	        
 	        // Set the caption and image filename
 	        stmt.setString(1, caption);
-	        stmt.setString(2, imagefileName);
+	        stmt.setString(2, imageName);
 	        
 	        // Execute the query
 	        int rows = stmt.executeUpdate();
 	        
 	        if (rows > 0) {
 	            System.out.println("Post saved to database successfully");
-//	            response.getWriter().write("Upload successful: " + imagefileName);
-	            response.sendRedirect("create");
+//	            response.getWriter().write("Upload successful: " + imageName);
+	            response.sendRedirect("home");
 	        } else {
 	            System.out.println("Failed to save post to database");
 	            response.getWriter().write("Database save failed");

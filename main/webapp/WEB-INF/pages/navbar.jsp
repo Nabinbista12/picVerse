@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Navbar</title>
+<title>Picverse</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/navbar.css" />
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -28,7 +28,7 @@
 		<!-- Search bar -->
 		<div class="search-bar">
 			<form action="${pageContext.request.contextPath}/search" method="GET">
-				<input type="text" name="query" placeholder="Search for anything..." />
+				<input type="text" name="query" placeholder="Search here..." />
 				<button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
 			</form>
 		</div>
