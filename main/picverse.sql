@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 12, 2025 at 04:30 AM
+-- Generation Time: May 17, 2025 at 02:19 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -76,6 +76,29 @@ INSERT INTO `comment` (`id`, `comment`, `post_id`, `user_id`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `contact`
+--
+
+CREATE TABLE `contact` (
+  `id` int(10) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `phone_number` int(10) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `subject` varchar(255) NOT NULL,
+  `message` varchar(1000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `contact`
+--
+
+INSERT INTO `contact` (`id`, `name`, `phone_number`, `email`, `subject`, `message`) VALUES
+(1, 'first', 1111111111, 'first@gmail.com', 'testing', 'working or not'),
+(2, 'first', 1111111111, 'first@gmail.com', 'testing', 'testing or not');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `post`
 --
 
@@ -116,7 +139,33 @@ CREATE TABLE `post_like` (
   `id` int(10) NOT NULL,
   `post_id` int(10) NOT NULL,
   `user_id` int(10) NOT NULL,
-  `is_liked` tinyint(1) NOT NULL
+  `is_liked` tinyint(1) NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `post_like`
+--
+
+INSERT INTO `post_like` (`id`, `post_id`, `user_id`, `is_liked`) VALUES
+(31, 23, 1, 1),
+(32, 17, 1, 1),
+(36, 38, 1, 1),
+(38, 37, 1, 1),
+(39, 36, 1, 1),
+(41, 40, 1, 1),
+(42, 39, 1, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `saved_post`
+--
+
+CREATE TABLE `saved_post` (
+  `id` int(10) NOT NULL,
+  `user_id` int(10) NOT NULL,
+  `post_id` int(10) NOT NULL,
+  `is_saved` tinyint(1) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -165,6 +214,12 @@ ALTER TABLE `comment`
   ADD KEY `user_id` (`user_id`);
 
 --
+-- Indexes for table `contact`
+--
+ALTER TABLE `contact`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `post`
 --
 ALTER TABLE `post`
@@ -178,6 +233,14 @@ ALTER TABLE `post_like`
   ADD PRIMARY KEY (`id`),
   ADD KEY `posts_id` (`post_id`),
   ADD KEY `users_id` (`user_id`);
+
+--
+-- Indexes for table `saved_post`
+--
+ALTER TABLE `saved_post`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `post_save_id` (`post_id`),
+  ADD KEY `user_saved_id` (`user_id`);
 
 --
 -- Indexes for table `user`
@@ -196,15 +259,27 @@ ALTER TABLE `comment`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
+-- AUTO_INCREMENT for table `contact`
+--
+ALTER TABLE `contact`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `post`
 --
 ALTER TABLE `post`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
 -- AUTO_INCREMENT for table `post_like`
 --
 ALTER TABLE `post_like`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+
+--
+-- AUTO_INCREMENT for table `saved_post`
+--
+ALTER TABLE `saved_post`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
 
 --
@@ -236,6 +311,13 @@ ALTER TABLE `post`
 ALTER TABLE `post_like`
   ADD CONSTRAINT `posts_id` FOREIGN KEY (`post_id`) REFERENCES `post` (`id`),
   ADD CONSTRAINT `users_id` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`);
+
+--
+-- Constraints for table `saved_post`
+--
+ALTER TABLE `saved_post`
+  ADD CONSTRAINT `post_save_id` FOREIGN KEY (`post_id`) REFERENCES `post` (`id`),
+  ADD CONSTRAINT `user_saved_id` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
