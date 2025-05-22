@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+body {
+	font-family: "Poppins", sans-serif;
+	
+}
+
 .sidebar {
 	position: fixed;;
 	top: 0;

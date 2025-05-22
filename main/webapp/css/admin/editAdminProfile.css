@@ -2,7 +2,6 @@
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
   background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for overlay */
   display: flex;
   justify-content: center;
