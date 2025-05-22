@@ -20,7 +20,7 @@ import com.picverse.config.DatabaseConfig;
 /**
  * Servlet implementation class CreateServlet
  */
-@MultipartConfig
+@MultipartConfig(fileSizeThreshold = 1024 * 1024, maxFileSize = 1024 * 1024 * 5, maxRequestSize = 1024 * 1024 * 10)
 @WebServlet("/create")
 public class CreateServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -59,12 +59,17 @@ public class CreateServlet extends HttpServlet {
 	    String caption = request.getParameter("caption");
 	    
 	    // Get image file
+	    
 	    Part file = request.getPart("image");
 	    String imageName = file.getSubmittedFileName();
 	    System.out.println("File name: " + imageName);
 	    System.out.println("Caption: " + caption);
 	    
-	    String uploadPath = getServletContext().getRealPath("uploads/images/") + imageName;
+	 // To give a abosolute path so that image save in the upload image folder.
+	 		// Give absolute path like "C:Advance Java/picverse/src/main/webapp/uploads/images/" of the project in the blank area
+//	 		String uploadPath = "" + imageName;
+	    String uploadPath = "E:/20th/Advance Java/Restart/picverse/src/main/webapp/uploads/images/" + imageName;
+//	    String uploadPath = getServletContext().getRealPath("uploads/images/") + imageName;
 	    System.out.println("Upload path: " + uploadPath);
 	    
 	    // Uploading the file to server
@@ -81,7 +86,7 @@ public class CreateServlet extends HttpServlet {
 	        
 	    } catch (IOException e) {
 	        e.printStackTrace();
-	        response.getWriter().write("Upload failed: " + e.getMessage());
+	        request.getRequestDispatcher("/WEB-INF/pages/error.jsp").forward(request, response);
 	        return; // Return early if file upload fails
 	    }
 	    
@@ -124,11 +129,11 @@ public class CreateServlet extends HttpServlet {
 	    } catch (SQLException e) {
 	        // Print SQL-specific errors
 	        e.printStackTrace();
-	        response.getWriter().write("Database error: " + e.getMessage());
+	        request.getRequestDispatcher("/WEB-INF/pages/error.jsp").forward(request, response);
 	    } catch (Exception e) {
 	        // Handle any other types of exceptions
 	        e.printStackTrace();
-	        response.getWriter().write("Error: " + e.getMessage());
+	        request.getRequestDispatcher("/WEB-INF/pages/error.jsp").forward(request, response);
 	    } finally {
 	        try {
 	            // Close resources
@@ -136,6 +141,7 @@ public class CreateServlet extends HttpServlet {
 	            if (connection != null) connection.close();
 	        } catch (SQLException e) {
 	            // Handle closing errors
+	        	request.getRequestDispatcher("/WEB-INF/pages/error.jsp").forward(request, response);
 	            e.printStackTrace();
 	        }
 	    }
