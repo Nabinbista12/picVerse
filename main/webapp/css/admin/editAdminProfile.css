@@ -1,7 +1,6 @@
 @charset "UTF-8";
 
 body {
-  margin: 0;
   background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for overlay */
   display: flex;
   justify-content: center;
