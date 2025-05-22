@@ -68,8 +68,8 @@ public class CreateServlet extends HttpServlet {
 	 // To give a abosolute path so that image save in the upload image folder.
 	 		// Give absolute path like "C:Advance Java/picverse/src/main/webapp/uploads/images/" of the project in the blank area
 //	 		String uploadPath = "" + imageName;
-	    String uploadPath = "E:/20th/Advance Java/Restart/picverse/src/main/webapp/uploads/images/" + imageName;
-//	    String uploadPath = getServletContext().getRealPath("uploads/images/") + imageName;
+//	    String uploadPath = "E:/20th/Advance Java/Restart/picverse/src/main/webapp/uploads/images/" + imageName;
+	    String uploadPath = getServletContext().getRealPath("uploads/images/") + imageName;
 	    System.out.println("Upload path: " + uploadPath);
 	    
 	    // Uploading the file to server
