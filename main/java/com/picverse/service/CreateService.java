@@ -38,13 +38,11 @@ public class CreateService {
         String imageName = filePart.getSubmittedFileName();
         
      // To give a abosolute path so that image save in the upload image folder.
-     		// Give absolute path like "C:Advance Java/picverse/src/main/webapp/uploads/images/" of the project in the blank area
-//     		String uploadPath = "" + imageName;
-     		
-     		String uploadDir = "E:/20th/Advance Java/Restart/picverse/src/main/webapp/uploads/images/" + imageName;
+     		// Give absolute path like "C:Advance Java/picverse/src/main/webapp/uploads/images/" of the project in the blank 
+//     		String uploadDir = "C:/picverse/src/main/webapp/uploads/images/" + imageName;
 
         // Define the server path where the image will be saved
-//        String uploadDir = context.getRealPath("uploads/images/");
+        String uploadDir = context.getRealPath("uploads/images/");
         String uploadPath = uploadDir + File.separator + imageName;
 
         // Ensure the upload directory exists

@@ -93,13 +93,11 @@ public class EditProfileService {
 		String imageName = file.getSubmittedFileName();
 		
 		// To give a abosolute path so that image save in the upload image folder.
-		// Give absolute path like "C:Advance Java/picverse/src/main/webapp/uploads/images/" of the project in the blank area
-//		String uploadPath = "" + imageName;
+		// Give absolute path like "C:Advance Java/picverse/src/main/webapp/uploads/images/" of the project in the blank area		
+//		String uploadPath = "E:/Advance Java/Restart/picverse/src/main/webapp/uploads/images/" + imageName;
 		
-		
-		String uploadPath = "E:/20th/Advance Java/Restart/picverse/src/main/webapp/uploads/images/" + imageName;
 		// This is the link of the temp folder of the image
-//		String uploadPath = context.getRealPath("uploads/images/") + imageName;
+		String uploadPath = context.getRealPath("uploads/images/") + imageName;
 		
 		System.out.println("Upload Path: " + uploadPath);
 
